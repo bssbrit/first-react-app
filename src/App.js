@@ -1,6 +1,6 @@
 import Header from './components/Header';
 import './App.css';
-
+import BtnPannel from './components/BtnPannel';
 function App() {
   
 
@@ -9,7 +9,7 @@ function App() {
       
      <Header />
      <div className='painel'>Painel</div>
-    
+     <BtnPannel />
     </div>
   );
 }
