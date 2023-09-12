@@ -11,3 +11,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.dark-mode {
+  background-color: rgba(97, 7, 243, 0.993);
+  color: white;
+  > #container{
+    background-color: purple;
+    
+   >.App{
+     background-color: brown;
+    > header {
+     background-color: blue;
+     }
+    }
+  }
+}
+
+.light-mode {
+  background-color: white;
+  color: white;
+    > #container{
+      background-color: purple;
+     >.App{
+       background-color: brown;
+      > header {
+       background-color: blue;
+      }
+    }
+  }
+}
+
+.grey-mode {
+  background-color: grey;
+  color: white;
+    > #container{
+      background-color: purple;
+     >.App{
+       background-color: brown;
+      > header {
+       background-color: blue;
+      }
+    }
+  }
+}
+
+
