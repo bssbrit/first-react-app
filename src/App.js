@@ -1,14 +1,18 @@
 import Header from './components/Header';
 import './App.css';
 import BtnPannel from './components/BtnPannel';
-function App() {
-  
 
+function App() {
+ 
+ 
   return (
     <div className="App" >
       
      <Header />
-     <div className='painel'>Painel</div>
+     <div >
+      <h1 className='painel'></h1>
+      <p className='numeroAnterior'>  </p>
+     </div>
      <BtnPannel />
     </div>
   );

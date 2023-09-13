@@ -1,46 +1,22 @@
 import Btn from "./DigitBtn"
 import OperatorBtn from "./OperatorBtn";
-// funções de operações
-function soma(x, y) {
-  return x + y;
-}
-
-function subtraction(x, y) {
-  return x - y;
-}
-function multiply(x, y) {
-  return x * y;
-}
-
-function division(x, y) {
-  return x / y;
-}
-
-function operate(x, y, operator) {
-  //talvez fazer um if
-  switch (operator) {
-    case "+":
-      return Math.round(soma(x, y) * 10) / 10;
-      break;
-    case "-":
-      return Math.round(subtraction(x, y) * 10) / 10;
-      break;
-    case "x":
-      return Math.round(multiply(x, y) * 10) / 10;
-      break;
-    case "/":
-      return Math.round(division(x, y) * 10) / 10;
-      break;
-    //default:
-    //return "Tu digitou certo, Bruno?";
-  }
-}
+import { useState } from "react";
 
 
 const BtnPannel = () => {
+  let [numero, selecionarN] = useState(0);
+
+  function handleClick(x) {
+    console.log(x)
+    
+     selecionarN(numero + x);
+     console.log(numero)
+     document.querySelector('.painel').textContent += x
+  }
+   
   return (
     <div>
-      <Btn value = '7'  />
+      <Btn value = '7' onClick={() => handleClick("7")}/>
       <Btn value = '8'/>
       <Btn value = '9'/>
       <OperatorBtn operator = 'DEL'/>
@@ -56,7 +32,7 @@ const BtnPannel = () => {
       <Btn value = '0'/>
       <OperatorBtn operator = '/'/>
       <OperatorBtn operator = 'x'/>
-      <OperatorBtn operator = 'RESET'/>
+      <OperatorBtn operator = 'RESET' />
       <OperatorBtn operator = '='/>
     </div>
   )
