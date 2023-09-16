@@ -1,15 +1,9 @@
-
-const OperatorBtn = ({operator}) => {
- const chooseOperator = () => {
-  let numero = document.querySelector('.painel').textContent 
-  console.log(numero)
-  document.querySelector('.numeroAnterior').textContent = numero
- }
+const OperatorBtn = ({ operator, onClick }) => {
   return (
-    <button className='digitBtn' onClick={() => chooseOperator(operator)} >
+    <button className="digitBtn" onClick={onClick}>
       <p>{operator}</p>
     </button>
-  )
-}
+  );
+};
 
-export default OperatorBtn
+export default OperatorBtn;
