@@ -1,15 +1,12 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+box-sizing: border-box;
+font-family: 'Rubik', sans-serif;
+
 }
 
 .dark-mode {
@@ -31,7 +28,7 @@ code {
   background-color: white;
   color: white;
     > #container{
-      background-color: purple;
+      background-color: aqua;
      >.App{
        background-color: brown;
       > header {
@@ -45,7 +42,7 @@ code {
   background-color: grey;
   color: white;
     > #container{
-      background-color: purple;
+      background-color: gray;
      >.App{
        background-color: brown;
       > header {
@@ -55,4 +52,84 @@ code {
   }
 }
 
+#container {
+  height: 100vh ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.App {
+ display: flex;
+ flex-direction: column;
+ height: 70%;
+ width: 35%;
+ padding: 1rem;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  
+}
+.theme {
+  display: flex;
+  font-size: .5rem;
+  justify-content: space-between;
+  
+}
+.themeP {
+ display: flex;
+ align-items: center;
+ 
+ padding-right: .6rem;
+}
+.themeOption{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.themeOption div {
+  display: flex;
+  justify-content: space-around;
+}
+.themeOptionBtn {
+  border-radius: 10px;
+}
+.themeOptionBtn button {
+  border-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: orange;
+  border-radius: 50%;  
+}
+.Numberdisplaydiv{
+  background-color: aqua;
+  border-radius: 10px;
+text-align: end;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding-right: 0.8rem;
+flex: 2;
+ 
+}
+.buttonsPannel{
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+}
+.numbersOperators{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 0.5rem;
+  row-gap: 0.2rem;
+}
+.resetEqual {
+  display: flex;
+  justify-content: space-between;
+}
+.resetEqual button {
+  width: 50%;
+}
