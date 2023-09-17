@@ -1,6 +1,6 @@
-const OperatorBtn = ({ operator, onClick }) => {
+const OperatorBtn = ({ operator, onClick, secondClass }) => {
   return (
-    <button className="digitBtn" onClick={onClick}>
+    <button className="digitBtn" id="equal" onClick={onClick}>
       <p>{operator}</p>
     </button>
   );

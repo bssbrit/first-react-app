@@ -8,18 +8,50 @@ box-sizing: border-box;
 font-family: 'Rubik', sans-serif;
 
 }
+/* #### Backgrounds
 
+- Very dark violet (main background): hsl(268, 75%, 9%)
+- Very dark violet (toggle background, keypad background, screen background): hsl(268, 71%, 12%)
+
+#### Keys
+
+- Dark violet (key background): hsl(281, 89%, 26%)
+- Vivid magenta (key shadow): hsl(285, 91%, 52%)
+
+- Pure cyan (key background, toggle): hsl(176, 100%, 44%)
+- Soft cyan (key shadow): hsl(177, 92%, 70%)
+
+- Very dark violet (key background): hsl(268, 47%, 21%)
+- Dark magenta (key shadow): hsl(290, 70%, 36%)
+
+#### Text
+
+- Light yellow: hsl(52, 100%, 62%)
+- Very dark blue: hsl(198, 20%, 13%)
+- White (text): hsl(0, 0%, 100%) */
 .dark-mode {
-  background-color: rgba(97, 7, 243, 0.993);
-  color: white;
+ 
+  color: hsl(52, 100%, 62%);
   > #container{
-    background-color: purple;
+    background-color:  hsl(268, 75%, 9%);
     
    >.App{
-     background-color: brown;
+     
     > header {
-     background-color: blue;
+     background-color: hsl(268, 71%, 12%);
      }
+     .Numberdisplaydiv{
+      background-color: hsl(268, 71%, 12%);
+    }
+     >.buttonsPannel button{
+      background-color: hsl(268, 71%, 12%);
+      border-bottom-color:hsl(285, 91%, 52%) ;
+      color: hsl(52, 100%, 62%);
+      >.digitBtn {
+        background-color:  hsl(176, 100%, 44%);
+   }  
+    }
+    
     }
   }
 }
@@ -39,12 +71,12 @@ font-family: 'Rubik', sans-serif;
 }
 
 .grey-mode {
-  background-color: grey;
+ 
   color: white;
     > #container{
-      background-color: gray;
+      background-color:hsl(185, 58%, 25%);
      >.App{
-       background-color: brown;
+       background-color: yellow;
       > header {
        background-color: blue;
       }
@@ -63,13 +95,13 @@ font-family: 'Rubik', sans-serif;
  display: flex;
  flex-direction: column;
  height: 70%;
- width: 35%;
+ width: 28%;
  padding: 1rem;
 }
 header {
   display: flex;
   justify-content: space-between;
-  flex: 1;
+  flex: 0.3;
   
 }
 .theme {
@@ -87,7 +119,7 @@ header {
 .themeOption{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 10%;
 }
 .themeOption div {
   display: flex;
@@ -95,13 +127,24 @@ header {
 }
 .themeOptionBtn {
   border-radius: 10px;
+  background-color: gray
 }
 .themeOptionBtn button {
   border-style: none;
   width: 10px;
   height: 10px;
-  background-color: orange;
+  background-color: transparent;
+  
   border-radius: 50%;  
+}
+.themeOptionBtn button:hover {
+  border: 1px solid orange
+}
+.themeOptionBtn button:active{
+  background-color: orange;
+}
+.ativado{
+  background-color: black;
 }
 .Numberdisplaydiv{
   background-color: aqua;
@@ -110,26 +153,56 @@ text-align: end;
 display: flex;
 flex-direction: column;
 justify-content: center;
-padding-right: 0.8rem;
-flex: 2;
- 
+margin: 5% 0 5% 0;
+padding-right: 5%;
+flex: 0.8;
+width: 100%
 }
 .buttonsPannel{
-  flex: 5;
+  flex: 2;
   display: flex;
   flex-direction: column;
-  padding: 0.8rem;
+  height: 100%;
 }
+
+.buttonsPannel button {
+  margin: 5%;
+  border-radius: 5px;
+  border-style: none;
+  border-bottom: 3px solid black;
+    
+} 
+.buttonsPannel button:hover {
+  background-color: rgba(221, 217, 217, 0.822);
+}
+.buttonsPannel button:active {
+  transform: scale(0.95); /* Scale down the button slightly when clicked */
+}
+
 .numbersOperators{
+  flex: 4;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 0.5rem;
   row-gap: 0.2rem;
 }
+
 .resetEqual {
   display: flex;
   justify-content: space-between;
+  gap: .6rem;
+  flex: 1;
+  
 }
 .resetEqual button {
-  width: 50%;
+  width: 100%;
+  margin: 0%;
+}
+.calc {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
 }
